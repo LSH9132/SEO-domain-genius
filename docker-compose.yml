@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  domain-generator:
+    build: .
+    volumes:
+      - .:/app
+      - ./models:/app/models
+    env_file:
+      - .env
+    command: python main.py 
